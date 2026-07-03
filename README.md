@@ -8,9 +8,9 @@ Works with Claude Code, Claude Desktop, Antigravity, Cursor, Windsurf, Codex, an
 MCP-compatible client.
 
 [![CI](https://github.com/eliasnvx/hytale-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/eliasnvx/hytale-mcp/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/hytale-mcp.svg)](https://www.npmjs.com/package/hytale-mcp)
+[![npm version](https://img.shields.io/npm/v/@eliasnvx/hytale-mcp.svg)](https://www.npmjs.com/package/@eliasnvx/hytale-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/node/v/hytale-mcp.svg)](package.json)
+[![Node](https://img.shields.io/node/v/@eliasnvx/hytale-mcp.svg)](package.json)
 
 ## Why
 
@@ -40,7 +40,7 @@ Edit the config file for your OS:
   "mcpServers": {
     "hytale-mcp": {
       "command": "npx",
-      "args": ["-y", "hytale-mcp"]
+      "args": ["-y", "@eliasnvx/hytale-mcp"]
     }
   }
 }
@@ -51,7 +51,7 @@ Restart Claude Desktop completely (quit, not just close the window) after saving
 ### Claude Code
 
 ```bash
-claude mcp add hytale-mcp -- npx -y hytale-mcp
+claude mcp add hytale-mcp -- npx -y @eliasnvx/hytale-mcp
 ```
 
 ### Antigravity, Cursor, Windsurf
@@ -62,7 +62,7 @@ through its built-in connector UI.
 ### Codex CLI
 
 ```bash
-codex mcp add hytale-mcp -- npx -y hytale-mcp
+codex mcp add hytale-mcp -- npx -y @eliasnvx/hytale-mcp
 ```
 
 ## Tools

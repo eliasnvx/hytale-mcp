@@ -1,6 +1,6 @@
 {
-  "name": "hytale-mcp",
-  "version": "0.1.0",
+  "name": "@eliasnvx/hytale-mcp",
+  "version": "0.1.1",
   "type": "module",
   "bin": {
     "hytale-mcp": "dist/index.js"
