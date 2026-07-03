@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { HytaleEvent, HytaleEntity, HytaleBlock, HytaleSound, JavaClass, CodeExample, ChangelogEntry } from "../types.js";
+import { HytaleEvent, HytaleEntity, HytaleBlock, HytaleSound, JavaClass, CodeExample, ChangelogEntry, KnownError, LoreMob, LoreItem } from "../types.js";
 
 // Ensure compatibility if import.meta.dirname is not supported in the exact Node version
 const __filename = fileURLToPath(import.meta.url);
@@ -25,3 +25,5 @@ export const api = loadJson<JavaClass[]>("api.json");
 export const examples = loadJson<CodeExample[]>("examples.json");
 export const changelog = loadJson<ChangelogEntry[]>("changelog.json");
 export const meta = loadJson<{builtAt: string, sources: Record<string, string>}>("meta.json");
+export const knownErrors = loadJson<KnownError[]>("known-errors.json");
+export const lore = loadJson<(LoreMob | LoreItem)[]>("lore.json");

@@ -59,3 +59,40 @@ export interface DocEntry {
   url: string
   source: string
 }
+
+export interface KnownError {
+  id: string
+  exceptionType: string
+  classPattern: string
+  methodPattern: string
+  title: string
+  cause: string
+  status: "fixed" | "known-unfixed" | "user-config"
+  fixVersion?: string
+  recommendation: string
+  source: string
+}
+
+export interface LoreMob {
+  type: "mob"
+  id: string
+  name: string
+  faction: string
+  disposition: "passive" | "neutral" | "hostile"
+  hp: number
+  zone: string
+  behavior: string
+  source: string
+}
+
+export interface LoreItem {
+  type: "item"
+  id: string
+  name: string
+  category: string
+  rarity?: string
+  damageMin?: number
+  damageMax?: number
+  durability?: number
+  source: string
+}

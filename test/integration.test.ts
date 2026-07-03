@@ -62,4 +62,24 @@ describe("Integration tests", () => {
     const text = (result.content as any)[0].text;
     expect(text).toBe("✅ Manifest is valid");
   });
+
+  it("calls analyze_error", async () => {
+    const result = await client.callTool({
+      name: "analyze_error",
+      arguments: {
+        log: "java.lang.NullPointerException\n  at com.hypixel.hytale.systems.PickupItemSystem.tick(PickupItemSystem.java:45)"
+      }
+    });
+    const text = (result.content as any)[0].text;
+    expect(text).toContain("Null target reference in PickupItemSystem");
+  });
+
+  it("calls get_lore", async () => {
+    const result = await client.callTool({
+      name: "get_lore",
+      arguments: { query: "Void Scythe" }
+    });
+    const text = (result.content as any)[0].text;
+    expect(text).toContain("Void Scythe");
+  });
 });

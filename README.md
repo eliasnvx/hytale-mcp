@@ -80,6 +80,8 @@ codex mcp add hytale-mcp -- npx -y @eliasnvx/hytale-mcp
 | `validate_manifest` | `json: string, type?: "plugin"\|"pack"` | Validate a `plugin.json` or pack manifest against required fields |
 | `get_sounds` | `query?: string, category?: string` | Sound key registry, optionally filtered by category |
 | `get_changelog` | `since?: string` | Recent Hytale server API changes |
+| `analyze_error` | `log: string` | Analyze a stack trace against known engine errors |
+| `get_lore` | `query?: string, type?: string, faction?: string` | Search Hytale lore (mobs, items, stats) |
 
 ## Example
 

@@ -12,6 +12,8 @@ import { getExamples, GetExamplesInput } from "./tools/get-examples.js";
 import { validateManifest, ValidateManifestInput } from "./tools/validate-manifest.js";
 import { getSounds, GetSoundsInput } from "./tools/get-sounds.js";
 import { getChangelog, GetChangelogInput } from "./tools/get-changelog.js";
+import { analyzeError, AnalyzeErrorInput } from "./tools/analyze-error.js";
+import { getLore, GetLoreInput } from "./tools/get-lore.js";
 
 const server = new McpServer({
   name: "Hytale Modding",
@@ -29,6 +31,8 @@ server.tool("get_examples", GetExamplesInput.shape, async (args) => await getExa
 server.tool("validate_manifest", ValidateManifestInput.shape, async (args) => await validateManifest(args as any));
 server.tool("get_sounds", GetSoundsInput.shape, async (args) => await getSounds(args as any));
 server.tool("get_changelog", GetChangelogInput.shape, async (args) => await getChangelog(args as any));
+server.tool("analyze_error", AnalyzeErrorInput.shape, async (args) => await analyzeError(args as any));
+server.tool("get_lore", GetLoreInput.shape, async (args) => await getLore(args as any));
 
 async function main() {
   const transport = new StdioServerTransport();

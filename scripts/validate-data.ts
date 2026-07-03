@@ -28,6 +28,8 @@ try {
   checkFile("examples.json");
   checkFile("changelog.json");
   checkFile("meta.json");
+  checkFile("known-errors.json");
+  checkFile("lore.json");
   console.log("All data files validated successfully!");
   process.exit(0);
 } catch (e: any) {

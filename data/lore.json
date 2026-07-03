@@ -1,0 +1,134 @@
+[
+  {
+    "type": "mob",
+    "id": "kweebec_elder",
+    "name": "Kweebec Elder",
+    "faction": "Kweebec",
+    "disposition": "passive",
+    "hp": 38,
+    "zone": "Emerald Grove / Zone 1",
+    "behavior": "passive, waves to players, flees when damaged, harming triggers nearby Kweebec Razorleaf to become hostile",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "kweebec_merchant",
+    "name": "Kweebec Merchant",
+    "faction": "Kweebec",
+    "disposition": "passive",
+    "hp": 50,
+    "zone": "Emerald Grove / Zone 1",
+    "behavior": "passive, sells items for Life Essence regardless of hostile actions nearby, damaging does not trigger Razorleaf hostility",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "kweebec_razorleaf",
+    "name": "Kweebec Razorleaf",
+    "faction": "Kweebec",
+    "disposition": "neutral",
+    "hp": 105,
+    "zone": "Emerald Grove / Zone 1",
+    "behavior": "ignores players but defends itself/others when attacked, rushes into melee with a spear",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "kweebec_rootling",
+    "name": "Kweebec Rootling",
+    "faction": "Kweebec",
+    "disposition": "passive",
+    "hp": 62,
+    "zone": "Emerald Grove / Zone 1",
+    "behavior": "passive, waves to players, flees when damaged",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_brawler",
+    "name": "Trork Brawler",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 61,
+    "zone": "Zone 1",
+    "behavior": "rushes first player seen, melee club attack, repositions to flank",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_chieftain",
+    "name": "Trork Chieftain",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 124,
+    "zone": "Zone 1",
+    "behavior": "rushes first player seen, melee battleaxe attack, repositions to flank",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_witch_doctor",
+    "name": "Trork Witch Doctor",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 74,
+    "zone": "Zone 1",
+    "behavior": "retreats while conjuring and launching rocks at range; can summon two hunting wolves (118 HP each) to attack",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_guard",
+    "name": "Trork Guard",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 61,
+    "zone": "Zone 1",
+    "behavior": "rushes first player seen, melee spear attack",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_hunter",
+    "name": "Trork Hunter",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 61,
+    "zone": "Zone 1",
+    "behavior": "retreats while throwing axes at medium range, switches to melee sword if approached; always accompanied by a hostile hunting wolf (38 HP)",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_mauler",
+    "name": "Trork Mauler",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 61,
+    "zone": "Zone 1",
+    "behavior": "rushes first player seen, melee stone maul attack",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "mob",
+    "id": "trork_sentry",
+    "name": "Trork Sentry",
+    "faction": "Trork",
+    "disposition": "hostile",
+    "hp": 61,
+    "zone": "Zone 1",
+    "behavior": "retreats while throwing spears at medium range",
+    "source": "https://www.bisecthosting.com/blog/hytale-mobs-guide-all-mobs-attacks-more"
+  },
+  {
+    "type": "item",
+    "id": "Weapon_Battleaxe_Scythe_Void",
+    "name": "Void Scythe",
+    "category": "Weapons",
+    "rarity": "Common",
+    "damageMin": 112,
+    "damageMax": 224,
+    "durability": 80,
+    "source": "https://hytaleguide.net/items/void-scythe"
+  }
+]

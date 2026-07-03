@@ -1,0 +1,93 @@
+[
+  {
+    "id": "pickup-item-null-target-ref",
+    "exceptionType": "java.lang.NullPointerException",
+    "classPattern": "PickupItemSystem",
+    "methodPattern": "tick",
+    "title": "Null target reference in PickupItemSystem",
+    "cause": "A `PickupItemComponent` was created without using the constructors that set `targetRef` — e.g. spawned or loaded from data via the codec directly, or a plugin passed a null value.",
+    "status": "fixed",
+    "fixVersion": "HyFixes Early Plugin v1.4.3+",
+    "recommendation": "Ensure `PickupItemComponent` is always created via its constructor, never assembled manually from codec data. If you can't control the source, install HyFixes as a mitigation.",
+    "source": "https://github.com/John-Willikers/hyfixes"
+  },
+  {
+    "id": "beacon-spawn-null-role-params",
+    "exceptionType": "java.lang.NullPointerException",
+    "classPattern": "BeaconSpawnController",
+    "methodPattern": "createRandomSpawnJob",
+    "title": "Null role parameters for spawn beacon",
+    "cause": "`getRandomSpawn()` returned null — spawn beacons in volcanic/cave biomes can have misconfigured or missing spawn types.",
+    "status": "fixed",
+    "fixVersion": "HyFixes Early Plugin v1.4.3+",
+    "recommendation": "Check your spawn beacon configuration for missing spawn type entries in volcanic or cave biome definitions.",
+    "source": "https://github.com/John-Willikers/hyfixes"
+  },
+  {
+    "id": "duplicate-block-component",
+    "exceptionType": "java.lang.IllegalArgumentException",
+    "classPattern": "BlockComponentChunk",
+    "methodPattern": "addEntityReference",
+    "title": "Duplicate block component registration",
+    "cause": "A duplicate block component was detected and the engine throws instead of handling it gracefully.",
+    "status": "known-unfixed",
+    "recommendation": "Avoid registering the same block component twice on one block entity. If this comes from a third-party plugin conflict, check for overlapping block component registrations.",
+    "source": "https://github.com/John-Willikers/hyfixes"
+  },
+  {
+    "id": "player-already-in-world",
+    "exceptionType": "java.lang.IllegalStateException",
+    "classPattern": "World",
+    "methodPattern": "addPlayer",
+    "title": "Player already exists in destination world",
+    "cause": "Race condition — a player entered an instance portal but hadn't been fully removed from their previous world yet. `InstancesPlugin` uses async CompletableFuture code with a drain/add race.",
+    "status": "fixed",
+    "fixVersion": "HyFixes Early Plugin v1.4.1+",
+    "recommendation": "If writing custom portal/instance logic, ensure the player is fully drained from the source world before adding to the destination world. Avoid parallel add/remove calls on the same player.",
+    "source": "https://github.com/John-Willikers/hyfixes"
+  },
+  {
+    "id": "interaction-chain-sync-data-loss",
+    "exceptionType": "none",
+    "classPattern": "InteractionChain",
+    "methodPattern": "putInteractionSyncData",
+    "title": "Silent interaction sync data loss",
+    "cause": "Packets arriving out of order cause a negative index after offset adjustment; the engine silently drops the sync data instead of erroring, breaking combat, food consumption, and tool interactions without a visible crash.",
+    "status": "known-unfixed",
+    "recommendation": "If players report combat/eating/tool actions silently failing under load, check server logs for repeated `[InteractionChain] Attempted to store sync data` warnings. This is a known engine issue with no plugin-level fix yet.",
+    "source": "https://github.com/John-Willikers/hyfixes"
+  },
+  {
+    "id": "duplicate-plugin-load",
+    "exceptionType": "java.lang.IllegalArgumentException",
+    "classPattern": "HytaleServer",
+    "methodPattern": "boot",
+    "title": "Duplicate plugin JARs detected",
+    "cause": "Two copies of the same plugin file are present, usually from an update that didn't remove the old version.",
+    "status": "user-config",
+    "recommendation": "Check your mods/plugins directory for duplicate JAR files with different version suffixes and remove the outdated one.",
+    "source": "https://apexminecrafthosting.com/guides/hytale/hytale-server-mods-plugins-troubleshooting/"
+  },
+  {
+    "id": "missing-plugin-dependency",
+    "exceptionType": "varies (ClassNotFoundException or plugin fails to enable)",
+    "classPattern": "",
+    "methodPattern": "",
+    "title": "Missing plugin dependency",
+    "cause": "A plugin requires another mod as a dependency that isn't installed.",
+    "status": "user-config",
+    "recommendation": "Check the plugin's documentation or `plugin.json` for a `depends` field and install all listed dependencies in the same mods directory.",
+    "source": "https://apexminecrafthosting.com/guides/hytale/hytale-server-mods-plugins-troubleshooting/"
+  },
+  {
+    "id": "i18n-null-messages",
+    "exceptionType": "java.lang.NullPointerException",
+    "classPattern": "I18nModule",
+    "methodPattern": "getMessages",
+    "title": "I18n missing localization data",
+    "cause": "The system locale is not set to English (US); the current Hytale build fails to load localization data for non-English system languages, breaking the Asset Editor.",
+    "status": "known-unfixed",
+    "recommendation": "Change your OS system language to English (US) and restart before opening the Asset Editor. This affects Windows and Linux Hytale setups.",
+    "source": "https://hytaleip.com/forum/thread/hytale-crash-log-analysis-exception-in-thread-main"
+  }
+]
