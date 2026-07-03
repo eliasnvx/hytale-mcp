@@ -1,0 +1,88 @@
+[
+  {
+    "name": "IPlugin",
+    "package": "dev.hytale.api.plugin",
+    "description": "Base interface for all plugins.",
+    "methods": [
+      { "name": "onEnable", "signature": "void onEnable()", "description": "Called when the plugin is enabled." },
+      { "name": "onDisable", "signature": "void onDisable()", "description": "Called when the plugin is disabled." }
+    ]
+  },
+  {
+    "name": "IEvent",
+    "package": "dev.hytale.api.event",
+    "description": "Base interface for synchronous events.",
+    "methods": [
+      { "name": "isCancelled", "signature": "boolean isCancelled()", "description": "Check if the event is cancelled." },
+      { "name": "setCancelled", "signature": "void setCancelled(boolean cancelled)", "description": "Set the cancellation state." }
+    ]
+  },
+  {
+    "name": "IAsyncEvent",
+    "package": "dev.hytale.api.event",
+    "description": "Base interface for asynchronous events.",
+    "methods": []
+  },
+  {
+    "name": "ICommand",
+    "package": "dev.hytale.api.command",
+    "description": "Command execution interface.",
+    "methods": [
+      { "name": "execute", "signature": "boolean execute(ICommandSender sender, String[] args)", "description": "Executes the command." }
+    ]
+  },
+  {
+    "name": "IEntity",
+    "package": "dev.hytale.api.entity",
+    "description": "Represents an entity in the world.",
+    "methods": [
+      { "name": "getUuid", "signature": "UUID getUuid()", "description": "Gets the entity's UUID." },
+      { "name": "getLocation", "signature": "Location getLocation()", "description": "Gets the entity's current location." }
+    ]
+  },
+  {
+    "name": "IPlayer",
+    "package": "dev.hytale.api.player",
+    "description": "Represents a player.",
+    "methods": [
+      { "name": "getName", "signature": "String getName()", "description": "Gets the player's name." },
+      { "name": "sendMessage", "signature": "void sendMessage(String message)", "description": "Sends a message to the player." }
+    ]
+  },
+  {
+    "name": "IBlock",
+    "package": "dev.hytale.api.block",
+    "description": "Represents a block in the world.",
+    "methods": [
+      { "name": "getId", "signature": "String getId()", "description": "Gets the block ID." },
+      { "name": "getLocation", "signature": "Location getLocation()", "description": "Gets the block's location." }
+    ]
+  },
+  {
+    "name": "IWorld",
+    "package": "dev.hytale.api.world",
+    "description": "Represents a loaded world.",
+    "methods": [
+      { "name": "getBlockAt", "signature": "IBlock getBlockAt(Location location)", "description": "Gets the block at the location." },
+      { "name": "spawnEntity", "signature": "IEntity spawnEntity(String entityId, Location location)", "description": "Spawns an entity." }
+    ]
+  },
+  {
+    "name": "IScheduler",
+    "package": "dev.hytale.api.scheduler",
+    "description": "Task scheduler.",
+    "methods": [
+      { "name": "runTask", "signature": "void runTask(Runnable task)", "description": "Runs a task on the main thread." },
+      { "name": "runTaskLater", "signature": "void runTaskLater(Runnable task, long delay)", "description": "Runs a task after a delay." }
+    ]
+  },
+  {
+    "name": "IConfig",
+    "package": "dev.hytale.api.config",
+    "description": "Configuration manager.",
+    "methods": [
+      { "name": "getString", "signature": "String getString(String path)", "description": "Gets a string from the config." },
+      { "name": "getInt", "signature": "int getInt(String path)", "description": "Gets an integer from the config." }
+    ]
+  }
+]

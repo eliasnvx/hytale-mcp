@@ -1,0 +1,22 @@
+[
+  { "id": "hytale:trork", "name": "Trork", "description": "A green-skinned hostile creature.", "category": "hostile" },
+  { "id": "hytale:outlander", "name": "Outlander", "description": "Mysterious masked hostile entity.", "category": "hostile" },
+  { "id": "hytale:crop_creature", "name": "Crop Creature", "description": "A passive creature made of crops.", "category": "passive" },
+  { "id": "hytale:stone_golem", "name": "Stone Golem", "description": "A neutral stony giant.", "category": "neutral" },
+  { "id": "hytale:forest_spirit", "name": "Forest Spirit", "description": "A peaceful glowing sprite.", "category": "passive" },
+  { "id": "hytale:void_dragon", "name": "Void Dragon", "description": "A massive boss dragon.", "category": "boss" },
+  { "id": "hytale:slothian", "name": "Slothian", "description": "A slow, underground-dwelling neutral entity.", "category": "neutral" },
+  { "id": "hytale:kweebec", "name": "Kweebec", "description": "A friendly plant-like creature.", "category": "passive" },
+  { "id": "hytale:goblin", "name": "Goblin", "description": "A small hostile mob often found with bombs.", "category": "hostile" },
+  { "id": "hytale:yeti", "name": "Yeti", "description": "A large hostile creature of the cold biomes.", "category": "hostile" },
+  { "id": "hytale:fen_stalker", "name": "Fen Stalker", "description": "An aggressive swamp predator.", "category": "hostile" },
+  { "id": "hytale:sculk_crawler", "name": "Crawler", "description": "A creepy hostile bug.", "category": "hostile" },
+  { "id": "hytale:pigeon", "name": "Pigeon", "description": "A simple flying bird.", "category": "passive" },
+  { "id": "hytale:bear", "name": "Bear", "description": "A neutral bear that gets hostile if provoked.", "category": "neutral" },
+  { "id": "hytale:wolf", "name": "Wolf", "description": "A neutral pack hunter.", "category": "neutral" },
+  { "id": "hytale:fox", "name": "Fox", "description": "A small passive forest creature.", "category": "passive" },
+  { "id": "hytale:scarecrow", "name": "Scarecrow", "description": "A decorative entity, or is it alive?", "category": "neutral" },
+  { "id": "hytale:dinosaur", "name": "Dinosaur", "description": "A large ancient creature.", "category": "neutral" },
+  { "id": "hytale:vampire_bat", "name": "Vampire Bat", "description": "A blood-sucking hostile bat.", "category": "hostile" },
+  { "id": "hytale:grizzly", "name": "Grizzly", "description": "A dangerous neutral bear variant.", "category": "neutral" }
+]

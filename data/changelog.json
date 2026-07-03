@@ -1,0 +1,25 @@
+[
+  {
+    "version": "1.0.0",
+    "date": "2026-06-01",
+    "changes": [
+      { "type": "added", "description": "Initial EA launch API release." }
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2026-06-15",
+    "changes": [
+      { "type": "added", "description": "Added PlayerRespawnEvent." },
+      { "type": "changed", "description": "IEntity.getLocation() now returns non-null Location." }
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "2026-06-25",
+    "changes": [
+      { "type": "removed", "description": "Deprecated getHealth() removed, use getAttribute(Health) instead." },
+      { "type": "added", "description": "Added IScheduler API." }
+    ]
+  }
+]

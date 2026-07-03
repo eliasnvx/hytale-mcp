@@ -1,0 +1,41 @@
+package {{packageName}};
+
+import dev.hytale.api.plugin.IPlugin;
+import dev.hytale.api.plugin.Plugin;
+{{#features.events}}
+import dev.hytale.api.event.EventHandler;
+import dev.hytale.api.event.player.PlayerJoinEvent;
+{{/features.events}}
+{{#features.commands}}
+import dev.hytale.api.command.Command;
+import dev.hytale.api.command.ICommandSender;
+{{/features.commands}}
+
+@Plugin(name = "{{name}}", version = "1.0.0")
+public class {{name}} implements IPlugin {
+
+    @Override
+    public void onEnable() {
+        System.out.println("{{name}} enabled!");
+    }
+
+    @Override
+    public void onDisable() {
+        System.out.println("{{name}} disabled!");
+    }
+
+{{#features.events}}
+    @EventHandler
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        event.getPlayer().sendMessage("Welcome!");
+    }
+{{/features.events}}
+
+{{#features.commands}}
+    @Command(name = "hello", description = "Says hello")
+    public boolean executeHello(ICommandSender sender, String[] args) {
+        System.out.println("Hello command executed");
+        return true;
+    }
+{{/features.commands}}
+}

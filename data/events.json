@@ -1,0 +1,17 @@
+[
+  { "name": "PlayerJoinEvent", "type": "sync", "description": "Fired when a player joins the server.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player joining" }], "example": "@EventHandler\npublic void onPlayerJoin(PlayerJoinEvent event) {\n  event.getPlayer().sendMessage(\"Welcome!\");\n}" },
+  { "name": "PlayerLeaveEvent", "type": "sync", "description": "Fired when a player leaves the server.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player leaving" }] },
+  { "name": "PlayerMoveEvent", "type": "sync", "description": "Fired when a player moves.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player" }, { "name": "from", "type": "Location", "description": "Previous location" }, { "name": "to", "type": "Location", "description": "New location" }] },
+  { "name": "PlayerChatEvent", "type": "sync", "description": "Fired when a player sends a chat message.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The sender" }, { "name": "message", "type": "String", "description": "The chat message" }] },
+  { "name": "PlayerDeathEvent", "type": "sync", "description": "Fired when a player dies.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player" }, { "name": "cause", "type": "DamageCause", "description": "The cause of death" }] },
+  { "name": "PlayerRespawnEvent", "type": "sync", "description": "Fired when a player respawns.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player" }, { "name": "location", "type": "Location", "description": "The respawn location" }] },
+  { "name": "BlockBreakEvent", "type": "sync", "description": "Fired when a player breaks a block.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player" }, { "name": "block", "type": "IBlock", "description": "The broken block" }] },
+  { "name": "BlockPlaceEvent", "type": "sync", "description": "Fired when a player places a block.", "fields": [{ "name": "player", "type": "IPlayer", "description": "The player" }, { "name": "block", "type": "IBlock", "description": "The placed block" }] },
+  { "name": "ChunkLoadEvent", "type": "async", "description": "Fired asynchronously when a chunk is loaded.", "fields": [{ "name": "chunk", "type": "IChunk", "description": "The loaded chunk" }] },
+  { "name": "EntitySpawnEvent", "type": "sync", "description": "Fired when an entity spawns.", "fields": [{ "name": "entity", "type": "IEntity", "description": "The entity spawning" }] },
+  { "name": "EntityDeathEvent", "type": "sync", "description": "Fired when an entity dies.", "fields": [{ "name": "entity", "type": "IEntity", "description": "The dead entity" }, { "name": "killer", "type": "IEntity", "description": "The killer, if any" }] },
+  { "name": "EntityDamageEvent", "type": "sync", "description": "Fired when an entity takes damage.", "fields": [{ "name": "entity", "type": "IEntity", "description": "The entity taking damage" }, { "name": "amount", "type": "float", "description": "Damage amount" }] },
+  { "name": "ServerStartEvent", "type": "sync", "description": "Fired when the server starts.", "fields": [] },
+  { "name": "ServerStopEvent", "type": "sync", "description": "Fired when the server stops.", "fields": [] },
+  { "name": "TickEvent", "type": "sync", "description": "Fired on every server tick.", "fields": [{ "name": "tick", "type": "long", "description": "The current tick number" }] }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "topic": "basic plugin",
+    "title": "Minimal Plugin Class",
+    "code": "import dev.hytale.api.plugin.IPlugin;\nimport dev.hytale.api.plugin.Plugin;\n\n@Plugin(name = \"Example\", version = \"1.0.0\")\npublic class ExamplePlugin implements IPlugin {\n    @Override\n    public void onEnable() {\n        System.out.println(\"Example enabled!\");\n    }\n}",
+    "source": "github.com/HytaleModding/plugin-template"
+  },
+  {
+    "topic": "event listener",
+    "title": "Player Join Listener",
+    "code": "import dev.hytale.api.event.EventHandler;\nimport dev.hytale.api.event.player.PlayerJoinEvent;\n\npublic class JoinListener {\n    @EventHandler\n    public void onPlayerJoin(PlayerJoinEvent event) {\n        event.getPlayer().sendMessage(\"Welcome to the server!\");\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "command registration",
+    "title": "Simple Command",
+    "code": "import dev.hytale.api.command.Command;\nimport dev.hytale.api.command.ICommandSender;\n\npublic class HealCommand {\n    @Command(name = \"heal\", description = \"Heals the player\")\n    public boolean execute(ICommandSender sender, String[] args) {\n        // Heal logic\n        return true;\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "config",
+    "title": "Reading Config",
+    "code": "import dev.hytale.api.config.IConfig;\n\npublic class ConfigReader {\n    public void read(IConfig config) {\n        String welcomeMessage = config.getString(\"messages.welcome\");\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "entity spawning",
+    "title": "Spawn a Trork",
+    "code": "import dev.hytale.api.world.IWorld;\nimport dev.hytale.api.world.Location;\n\npublic class Spawner {\n    public void spawn(IWorld world, Location loc) {\n        world.spawnEntity(\"hytale:trork\", loc);\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "block manipulation",
+    "title": "Set Block to Stone",
+    "code": "import dev.hytale.api.world.IWorld;\nimport dev.hytale.api.world.Location;\n\npublic class BlockSetter {\n    public void setStone(IWorld world, Location loc) {\n        world.getBlockAt(loc).setType(\"hytale:stone\");\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "scheduler",
+    "title": "Delayed Task",
+    "code": "import dev.hytale.api.scheduler.IScheduler;\n\npublic class DelayedAction {\n    public void runLater(IScheduler scheduler) {\n        scheduler.runTaskLater(() -> {\n            System.out.println(\"Run after delay\");\n        }, 20L);\n    }\n}",
+    "source": "github.com/HytaleModding/examples"
+  },
+  {
+    "topic": "pack JSON",
+    "title": "Basic pack.json",
+    "code": "{\n  \"format_version\": 1,\n  \"header\": {\n    \"name\": \"My Pack\",\n    \"uuid\": \"12345678-1234-1234-1234-123456789abc\",\n    \"version\": [1, 0, 0]\n  }\n}",
+    "source": "britakee-studios.gitbook.io"
+  }
+]
