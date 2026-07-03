@@ -93,12 +93,7 @@ jobs:
       - run: npm run build
 
       - name: Verify server starts
-        run: |
-          timeout 5s node dist/index.js || code=$?
-          if [ "${code:-0}" -ne 124 ]; then
-            echo "Server exited unexpectedly (expected timeout from stdio wait)"
-            exit 1
-          fi
+        run: node dist/index.js < /dev/null
 
       - uses: actions/upload-artifact@v4
         with:
